@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".Controller.Activity.UserSettingsActivity.Activity.UserSettings">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:id="@+id/rlImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:padding="50dp">
+
+            <ImageView
+                android:id="@+id/ivProfilePicHolder"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_image"
+                android:contentDescription="@string/relevant_image"
+                android:src="@mipmap/ic_person_black_48dp" />
+
+            <ImageButton
+                android:id="@+id/lbtnProfilePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivProfilePicHolder"
+                android:layout_alignEnd="@+id/ivProfilePicHolder"
+                android:layout_alignRight="@+id/ivProfilePicHolder"
+                android:contentDescription="@string/relevant_image"
+                android:src="@mipmap/ic_camera_alt_white_24dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlImageContainer"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimaryText"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:textColor="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/ivEditName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/relevant_image"
+                android:src="@mipmap/ic_mode_edit_black_24dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
