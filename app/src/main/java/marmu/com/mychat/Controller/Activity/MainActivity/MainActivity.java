@@ -44,14 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
-    private StorageReference mStorageReference;
-    private DatabaseReference mDatabase;
 
     private String TAG = "MainActivity";
-
-    private List<ContactList> mContactLists = new ArrayList<>();
-    private ContactListAdapter mAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,64 +82,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new ChatFragment(), "CHATS");
         adapter.addFragment(new ContactFragment(), "CONTACTS");
         viewPager.setAdapter(adapter);
-    }
-
-    private void populateRecyclerView() {
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mAdapter = new ContactListAdapter(mContactLists);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                ContactList contactList = mContactLists.get(position);
-                Toast.makeText(getApplicationContext(), contactList.getContactName() + " is selected!", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onLongClick(View view, int position) {
-
-            }
-        }));
-        recyclerView.setAdapter(mAdapter);
-    }
-
-    private void prepareContactLists() {
-        ContactList contactList;
-        contactList = new ContactList("Azhar", "Single");
-        mContactLists.add(contactList);
-        contactList = new ContactList("Bharath", "Engaged");
-        mContactLists.add(contactList);
-        contactList = new ContactList("Sanjay", "Single");
-        mContactLists.add(contactList);
-        contactList = new ContactList("Niyaz", "Mingle");
-        mContactLists.add(contactList);
-        contactList = new ContactList("Shiva", "Married");
-        mContactLists.add(contactList);
-        contactList = new ContactList("Prabhakar", "Dead");
-        mContactLists.add(contactList);
-        contactList = new ContactList("Mohan", "ALive");
-        mContactLists.add(contactList);
-        contactList = new ContactList("Dinesh", "Don't Know");
-        mContactLists.add(contactList);
-        mDatabase = FirebaseDatabase.getInstance().getReference()
-                .child("users");
-        mDatabase.keepSynced(true);
-        mDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                //ContactList post = dataSnapshot.getValue(ContactList.class);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-        mAdapter.notifyDataSetChanged();
     }
 
     private void authStateListener() {

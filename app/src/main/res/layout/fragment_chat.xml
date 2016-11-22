@@ -6,10 +6,10 @@
     android:padding="@dimen/activity_horizontal_margin"
     tools:context="marmu.com.mychat.Controller.Fragment.ChatFragment">
 
-    <TextView
-        android:textColor="@color/colorAccent"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
 
 </FrameLayout>
