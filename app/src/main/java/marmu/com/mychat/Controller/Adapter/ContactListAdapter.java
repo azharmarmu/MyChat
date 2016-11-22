@@ -51,10 +51,10 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         ContactList contactList = mContactLists.get(position);
-        holder.mName.setText(contactList.getContactName());
-        holder.mStatus.setText(contactList.getStatus());
+        holder.mName.setText(contactList.getuser_name());
+        holder.mStatus.setText(contactList.getstatus());
         //holder.mImageId.setImageResource(contactList.getImageId());
-        Picasso.with(mContext).load(contactList.getImageId()).transform(new CircleTransform()).into(holder.mImageId);
+        Picasso.with(mContext).load(contactList.getprofile_pic()).transform(new CircleTransform()).into(holder.mImageId);
     }
 
     @Override

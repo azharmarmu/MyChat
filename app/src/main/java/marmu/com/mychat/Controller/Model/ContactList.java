@@ -1,40 +1,42 @@
 package marmu.com.mychat.Controller.Model;
 
+import android.net.Uri;
+
 public class ContactList {
 
-    private String ContactName, Status;
-    private int ImageId;
+    private String user_name, status;
+    private Uri profile_pic;
 
     public ContactList() {
     }
 
-    public ContactList(String contactName, String status, int imageId) {
-        this.ContactName = contactName;
-        this.Status = status;
-        this.ImageId = imageId;
+    public ContactList(String user_name, String status, Uri profile_pic) {
+        this.user_name = user_name;
+        this.status = status;
+        this.profile_pic = profile_pic;
     }
 
-    public String getContactName() {
-        return this.ContactName;
+    public String getuser_name() {
+        return this.user_name;
     }
 
-    public void setContactName(String contactName) {
-        this.ContactName = contactName;
+    public void setuser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public String getStatus() {
-        return this.Status;
+    public String getstatus() {
+        return this.status;
     }
 
-    public void setStatus(String status) {
-        this.Status = status;
+    public void setstatus(String status) {
+        this.status = status;
     }
 
-    public int getImageId() {
-        return this.ImageId;
+    public Uri getprofile_pic() {
+        return this.profile_pic;
     }
 
-    public void setImageId(int imageId) {
-        this.ImageId = imageId;
+    public void setprofile_pic(Uri profile_pic) {
+        this.profile_pic = profile_pic;
     }
 }

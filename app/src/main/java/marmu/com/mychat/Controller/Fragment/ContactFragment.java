@@ -1,5 +1,6 @@
 package marmu.com.mychat.Controller.Fragment;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -17,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import marmu.com.mychat.CommonStuffs.ClickListener;
@@ -66,11 +68,12 @@ public class ContactFragment extends Fragment {
         itemAnimator.setRemoveDuration(1000);
         recyclerView.setItemAnimator(itemAnimator);
 
-        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getContext(), recyclerView, new ClickListener() {
+        recyclerView.addOnItemTouchListener(
+                new RecyclerTouchListener(getContext(), recyclerView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
                 ContactList contactList = mContactLists.get(position);
-                Toast.makeText(getContext(), contactList.getContactName() + " is selected!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), contactList.getuser_name() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -82,8 +85,7 @@ public class ContactFragment extends Fragment {
     }
 
     private void prepareContactLists() {
-        ContactList contactList;
-        contactList = new ContactList("Azhar", "Single", R.drawable.profile);
+/*        contactList = new ContactList("Azhar", "Single", R.drawable.profile);
         mContactLists.add(contactList);
         contactList = new ContactList("Bharath", "Engaged", R.drawable.profile);
         mContactLists.add(contactList);
@@ -98,14 +100,24 @@ public class ContactFragment extends Fragment {
         contactList = new ContactList("Mohan", "ALive", R.drawable.profile);
         mContactLists.add(contactList);
         contactList = new ContactList("Dinesh", "Don't Know", R.drawable.profile);
-        mContactLists.add(contactList);
+        mContactLists.add(contactList);*/
         mDatabase = FirebaseDatabase.getInstance().getReference()
                 .child("users");
         mDatabase.keepSynced(true);
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                //ContactList post = dataSnapshot.getValue(ContactList.class);
+                ContactList contactList;
+                Iterator i = dataSnapshot.getChildren().iterator();
+                while (i.hasNext()) {
+                    String key = ((DataSnapshot) i.next()).getKey();
+                    String name = dataSnapshot.child(key).child("user_name").getValue().toString();
+                    String status = dataSnapshot.child(key).child("status").getValue().toString();
+                    String profile_pic = dataSnapshot.child(key).child("profile_pic").getValue().toString();
+
+                    mContactLists.add(new ContactList(name,status, Uri.parse(profile_pic)));
+
+                }
             }
 
             @Override
