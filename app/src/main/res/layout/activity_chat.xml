@@ -10,4 +10,76 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="marmu.com.mychat.Controller.Activity.ChatActivity.ChatActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/consultationChatView"
+        setStackFromEnd="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#fff">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+
+
+        <LinearLayout
+            android:id="@+id/chat_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/bottom_bar_toggle"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_gravity="bottom|left"
+                android:layout_margin="15dp"
+                android:background="@mipmap/ic_mood_black_24dp" />
+
+            <EditText
+                android:id="@+id/input_box_chat"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginBottom="4sp"
+                android:layout_weight="1"
+                android:hint="@string/type_your_message"
+                android:maxLines="3"
+                android:textAppearance="?android:attr/textAppearanceLarge"></EditText>
+
+            <com.software.shell.fab.ActionButton
+                android:id="@+id/send_button"
+                fab:button_color="@color/doxtro_light_blue"
+                fab:button_colorPressed="@color/doxtro_dark_blue"
+                fab:image="@drawable/ic_send_white_24dp"
+                fab:image_size="18sp"
+                fab:shadow_radius="0dp"
+                fab:size="35sp"
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="10dp"
+                android:padding="0sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 </RelativeLayout>
