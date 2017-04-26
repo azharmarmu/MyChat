@@ -1,15 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
-    android:padding="@dimen/activity_horizontal_margin"
-    tools:context="marmu.com.mychat.Controller.Fragment.ChatFragment">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <ListView
+        android:id="@+id/lstChatDialogs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
+        android:layout_height="wrap_content" />
 
-</FrameLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/chatdialog_adduser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="25dp"
+        android:scaleX="-1"
+        android:scaleY="-1"
+        android:src="@drawable/ic_message"
+        android:tint="@color/colorPrimary"
+        app:backgroundTint="@color/colorWhite"
+        app:layout_anchor="@id/lstChatDialogs" />
+
+</RelativeLayout>

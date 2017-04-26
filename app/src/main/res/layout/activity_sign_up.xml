@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.oyeee.azharuddin.oye.MainActivity">
-
-    <ImageView
-        android:id="@+id/image_message"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_message" />
+    android:orientation="vertical"
+    tools:context="com.oyeee.azharuddin.oye.SignUpActivity">
 
     <LinearLayout
         android:id="@+id/group_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/image_message"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
@@ -26,7 +18,19 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/main_editName"
+                android:id="@+id/signup_editFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your full name"
+                android:padding="5dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/signup_editName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter your name"
@@ -38,7 +42,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/main_editPassword"
+                android:id="@+id/signup_editPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter your password"
@@ -52,20 +56,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/group_login"
         android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:weightSum="2">
 
         <Button
+            android:id="@+id/signup_btnSignup"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:onClick="Login"
-            android:text="Login"
+            android:onClick="SignUp"
+            android:text="Sign Up"
             android:textColor="@color/colorAccent" />
 
         <Button
@@ -75,10 +79,10 @@
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:background="@color/colorAccent"
-            android:onClick="SignUp"
-            android:text="Signup"
+            android:onClick="Cancel"
+            android:text="Cancel"
             android:textColor="@color/colorPrimaryDark" />
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

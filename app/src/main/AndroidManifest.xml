@@ -8,26 +8,23 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name=".Application.ApplicationLetsChat"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.Activity.IndexActivity.IndexActivity" />
-        <activity android:name=".Controller.Activity.LoginActivity.LoginActivity" />
-        <activity android:name=".Controller.Activity.RegisterActivity.RegisterActivity" />
-        <activity android:name=".Controller.Activity.MainActivity.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Controller.Activity.UserSettingsActivity.Activity.UserSettings" />
-        <activity android:name=".Controller.Activity.UserSettingsActivity.Activity.UserEditName" />
-        <activity android:name=".Controller.Activity.UserSettingsActivity.Activity.UserEditProfilePic" />
-        <activity android:name=".Controller.Activity.ChatActivity.ChatActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LandingActivity" />
+        <activity android:name=".ListUsersActivity" />
+        <activity android:name=".ChatMessageActivity"></activity>
     </application>
 
 </manifest>
