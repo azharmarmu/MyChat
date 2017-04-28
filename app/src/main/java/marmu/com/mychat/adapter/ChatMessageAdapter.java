@@ -47,22 +47,25 @@ public class ChatMessageAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = convertView;
+        View view;
 
-        if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            if (qbChatMessages.get(position).getSenderId().equals(QBChatService.getInstance().getUser().getId())) {
-                view = inflater.inflate(R.layout.list_send_msg, null);
-                BubbleTextView bubbleTextView = (BubbleTextView) view.findViewById(R.id.message_content);
-                bubbleTextView.setText(qbChatMessages.get(position).getBody());
-            } else {
-                view = inflater.inflate(R.layout.list_recv_msg, null);
-                TextView textView = (TextView) view.findViewById(R.id.message_user);
-                textView.setText(QBUsersHolder.getInstance().getUserById(qbChatMessages.get(position).getSenderId()).getFullName());
-                BubbleTextView bubbleTextView = (BubbleTextView) view.findViewById(R.id.message_content);
-                bubbleTextView.setText(qbChatMessages.get(position).getBody());
-            }
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        if (qbChatMessages.get(position).getSenderId().equals(QBChatService.getInstance().getUser().getId())) {
+            view = inflater.inflate(R.layout.list_send_msg, null);
+
+            BubbleTextView bubbleTextView = (BubbleTextView) view.findViewById(R.id.message_content);
+            bubbleTextView.setText(qbChatMessages.get(position).getBody());
+        } else {
+            view = inflater.inflate(R.layout.list_recv_msg, null);
+
+            TextView textView = (TextView) view.findViewById(R.id.message_user);
+            textView.setText(QBUsersHolder.getInstance().getUserById(qbChatMessages.get(position).getSenderId()).getFullName());
+            BubbleTextView bubbleTextView = (BubbleTextView) view.findViewById(R.id.message_content);
+            bubbleTextView.setText(qbChatMessages.get(position).getBody());
         }
+
+
         return view;
     }
 }

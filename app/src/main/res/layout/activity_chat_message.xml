@@ -5,13 +5,46 @@
     android:layout_height="match_parent"
     tools:context="marmu.com.mychat.ChatMessageActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:id="@+id/dialog_info"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/view"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/img_online_count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/txt_online_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/lstChatDialogs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/message_container"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/dialog_info"
         android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="16dp"
         android:stackFromBottom="true" />

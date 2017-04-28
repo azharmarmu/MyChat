@@ -12,6 +12,7 @@ import com.quickblox.auth.QBAuth;
 import com.quickblox.auth.session.QBSession;
 import com.quickblox.auth.session.QBSettings;
 import com.quickblox.core.QBEntityCallback;
+import com.quickblox.core.StoringMechanism;
 import com.quickblox.core.exception.QBResponseException;
 import com.quickblox.users.QBUsers;
 import com.quickblox.users.model.QBUser;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeQBFrameWork() {
+        QBSettings.getInstance().setStoringMehanism(StoringMechanism.UNSECURED);
         QBSettings.getInstance().init(getApplicationContext(), APP_ID, AUTH_KEY, AUTH_SECRET);
         QBSettings.getInstance().setAccountKey(ACCOUNT_KEY);
     }

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.oyeee.azharuddin.oye.SignUpActivity">
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
 
     <LinearLayout
         android:id="@+id/group_login"
@@ -61,7 +65,6 @@
         android:weightSum="2">
 
         <Button
-            android:id="@+id/signup_btnSignup"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

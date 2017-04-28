@@ -2,6 +2,7 @@ package marmu.com.mychat;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,6 +18,14 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        Toolbar mToolBarView = (Toolbar) findViewById(R.id.view);
+        setSupportActionBar(mToolBarView);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Oye");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
     }
 
     public void SignUp(View view) {

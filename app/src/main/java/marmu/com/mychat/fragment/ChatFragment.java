@@ -1,9 +1,12 @@
 package marmu.com.mychat.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.ActionMode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +29,7 @@ import com.quickblox.chat.model.QBChatMessage;
 import com.quickblox.core.QBEntityCallback;
 import com.quickblox.core.exception.BaseServiceException;
 import com.quickblox.core.exception.QBResponseException;
+import com.quickblox.core.helper.StringifyArrayList;
 import com.quickblox.core.request.QBRequestGetBuilder;
 import com.quickblox.users.QBUsers;
 import com.quickblox.users.model.QBUser;
@@ -37,6 +41,7 @@ import java.util.Set;
 import marmu.com.mychat.ChatMessageActivity;
 import marmu.com.mychat.ListUsersActivity;
 import marmu.com.mychat.R;
+import marmu.com.mychat.action_mode.ChatFragmentActionMode;
 import marmu.com.mychat.adapter.ChatFragmentAdapter;
 import marmu.com.mychat.common.Common;
 import marmu.com.mychat.holder.QBChatDialogHolder;
@@ -48,8 +53,12 @@ public class ChatFragment extends Fragment {
 
     String user, password;
 
-    private ListView lstChatDialogs;
+    private static ChatFragmentAdapter adapter;
+    private static ListView lstChatDialogs;
 
+    //Action Mode for toolbar
+    private static ActionMode mActionMode;
+    private static ArrayList<QBChatDialog> chatDialog;
 
     public ChatFragment() {
     }
@@ -74,15 +83,7 @@ public class ChatFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
         lstChatDialogs = (ListView) view.findViewById(R.id.lstChatDialogs);
 
-        lstChatDialogs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                QBChatDialog qbChatDialog = (QBChatDialog) lstChatDialogs.getAdapter().getItem(position);
-                Intent chatMessageActivity = new Intent(getActivity(), ChatMessageActivity.class);
-                chatMessageActivity.putExtra(Common.DIALOG_EXTRA, qbChatDialog);
-                startActivity(chatMessageActivity);
-            }
-        });
+        implementListViewClickListeners();
 
 
         FloatingActionButton chatDialogAddUser = (FloatingActionButton) view.findViewById(R.id.chatdialog_adduser);
@@ -141,8 +142,8 @@ public class ChatFragment extends Fragment {
                                     public void onSuccess(QBChatDialog qbChatDialog, Bundle bundle) {
                                         //Put to cache
                                         QBChatDialogHolder.getInstance().putDialog(qbChatDialog);
-                                        ArrayList<QBChatDialog> adapterSource = QBChatDialogHolder.getInstance().getAllChatDialogs();
-                                        ChatFragmentAdapter adapter = new ChatFragmentAdapter(getActivity(), adapterSource);
+                                        chatDialog = QBChatDialogHolder.getInstance().getAllChatDialogs();
+                                        adapter = new ChatFragmentAdapter(getContext(), chatDialog);
                                         lstChatDialogs.setAdapter(adapter);
                                         adapter.notifyDataSetChanged();
                                     }
@@ -219,8 +220,10 @@ public class ChatFragment extends Fragment {
                                 //Save to cache
                                 QBUnreadMessageHolder.getInstance().setBundle(bundle);
 
+                                chatDialog = QBChatDialogHolder.getInstance().getAllChatDialogs();
+
                                 //Refresh List Dialog
-                                ChatFragmentAdapter adapter = new ChatFragmentAdapter(getContext(), QBChatDialogHolder.getInstance().getAllChatDialogs());
+                                adapter = new ChatFragmentAdapter(getContext(), chatDialog);
                                 lstChatDialogs.setAdapter(adapter);
                                 adapter.notifyDataSetChanged();
 
@@ -239,6 +242,78 @@ public class ChatFragment extends Fragment {
             }
         });
 
+    }
+
+    //Implement item click and long click over list view
+    private void implementListViewClickListeners() {
+        lstChatDialogs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                QBChatDialog qbChatDialog = (QBChatDialog) lstChatDialogs.getAdapter().getItem(position);
+                Intent chatMessageActivity = new Intent(getActivity(), ChatMessageActivity.class);
+                chatMessageActivity.putExtra(Common.DIALOG_EXTRA, qbChatDialog);
+                startActivity(chatMessageActivity);
+            }
+        });
+        lstChatDialogs.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                onListItemSelect(position);
+                return true;
+            }
+        });
+    }
+
+    //List item select method
+    private void onListItemSelect(int position) {
+        adapter.toggleSelection(position);//Toggle the selection
+        boolean hasCheckedItems = adapter.getSelectedCount() > 0;//Check if any items are already selected or not
+        if (hasCheckedItems && mActionMode == null)
+            // there are some selected items, start the actionMode
+            mActionMode = ((AppCompatActivity) getActivity()).startSupportActionMode(new ChatFragmentActionMode(getContext(), adapter));
+        else if (!hasCheckedItems && mActionMode != null)
+            // there no selected items, finish the actionMode
+            mActionMode.finish();
+        if (mActionMode != null)
+            //set action mode title on item selection
+            mActionMode.setTitle(String.valueOf(adapter
+                    .getSelectedCount()) + " selected");
+    }
+
+    //Set action mode null after use
+    public void setNullToActionMode() {
+        if (mActionMode != null)
+            mActionMode = null;
+    }
+
+    //Delete selected rows
+    public void deleteRows(final Context context) {
+
+
+        int selected = adapter.getSelectedCount();//Get selected ids
+        final StringifyArrayList<String> dialogIds = new StringifyArrayList<>();
+        for (int i = 0; i < selected; i++) {
+            dialogIds.add(adapter.getItem(i).getDialogId());
+        }
+
+        //delete row in server
+        QBRestChatService.deleteDialogs(dialogIds, false, null)
+                .performAsync(new QBEntityCallback<ArrayList<String>>() {
+                    @Override
+                    public void onSuccess(ArrayList<String> strings, Bundle bundle) {
+                        QBChatDialogHolder.getInstance().removeDialogs(dialogIds);
+                        chatDialog = QBChatDialogHolder.getInstance().getAllChatDialogs();
+                        adapter = new ChatFragmentAdapter(context, chatDialog);
+                        lstChatDialogs.setAdapter(adapter);
+                        adapter.notifyDataSetChanged();
+                    }
+
+                    @Override
+                    public void onError(QBResponseException e) {
+                        Log.e("Error", e.getMessage());
+                    }
+                });
+        mActionMode.finish();//Finish action mode after use
     }
 
     @Override

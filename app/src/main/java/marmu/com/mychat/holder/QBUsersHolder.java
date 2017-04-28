@@ -52,4 +52,14 @@ public class QBUsersHolder {
         }
         return qbUser;
     }
+
+    public ArrayList<QBUser> getAllUsers() {
+        ArrayList<QBUser> allUsers = new ArrayList<>();
+
+        for (int i = 0; i < qbUserSparseArray.size(); i++) {
+            allUsers.add(qbUserSparseArray.valueAt(i));
+        }
+
+        return allUsers;
+    }
 }

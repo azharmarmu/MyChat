@@ -3,372 +3,57 @@
 
     <item
         is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.8.0/jars/classes.jar"
+        jar="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="15e59454416c6341bd3ed2533b585cd340682dd1">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.8.0_862e5e250556b53b331e8d5f843268b9aed65050/classes.dex" />
+        revision="25.0.2"
+        sha1="2f3961de2c1f2629ff64d06bf1fab503db382c51">
+        <dex dex="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_881745cc57847cd42f45ec1cfb544f30ae18d5ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/azharuddin/.android/build-cache/2771dc435062bf9db18adac52cbc678fdcb4126d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4f22883dca862d1c2563d0477066638003d0ceca">
+        <dex dex="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/pre-dexed/debug/classes_02ceb94e071fa9226313843c247f09ffa79d6e8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/azharuddin/.android/build-cache/ce55ff9649ca52b736e061f8ad36845964f6091f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="379a48c2da13ffb7ec7134f2c715663834357670">
+        <dex dex="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/pre-dexed/debug/classes_80433dddd36aa905a99f320abbb54a0655ccd82b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/pre-dexed/debug/gson-2.4_8fc031c0b8d565d27381d67569c26a35c9f86517.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
+        jar="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.8.0_a6d1081d2b73d00837d2a9d6d8f781dbcde514f6/classes.dex" />
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3d1d347d68907623a225c553db024fceb590e3a7/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/home/azharuddin/.android/build-cache/3bd168024d1cb908d5b48d93fc6c2aed5c567286/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_d83569e75838469cd2cee987b6b69aa628b6682e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.8.0_41fb363a64f0238a165d16808ff81616e3a9489f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7fd91ec2730fdaa82906aad32a3f3d3e574bae56">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.8.0_6cc97ba6be11099a369ffcd04a1d78af972a86cd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ec9104b53aee77dfcfd2fe1c4add23ff7c4df55f">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.8.0_4a6879e09fd6d55e173c51a3f992c780a585af8b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="4438b1a7848a7c571122ba618aa1304514aabee6">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.8.0_016fd92bbcd04122420362740510e7dc38100650/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.2.2_8ae080438345e05c96b7f24df9334b5a97b4606a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_1ebe9a6bb3069e68e250f3f6bd0f799f4bc1845b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f47ede9561595584dca71104baa0fecb36dda87">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.8.0_116c87c2222041300c8e641b5e3c8a259b44f319/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9ff04cc3470178a44512624036751a803418c2ca">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.8.0_bd1a1168e62d02d7e301b0832aea45efee6f0bbe/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_4f9b7cb0bac8c9ff69f2503a9b0830f44cdeeca7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_ca9c653efb8a400ece66602c0038a04b79199609/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.1_4097b19c3b891e2fb63a2540fcee9e736a29e46c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_77e66827261dbe23bd341a7b6033c02c731e33f8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_7670249318e8db85bb2b6b7ade09061ba008ce5a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_dfcc75fd8a2db88e6dd3e229e1994500f17a3cd6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-databind-2.2.2_2f19c2411875e44e1f4868a10a9c6ec95948bce1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_e3fcb8b0ad8cd6be7c8f7879e0f4ab540aa2a756/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_d892c268a0b0f9d5a3c4d082076c867afd7dd07b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0a36baef9688ce750d1af01597203bff2da91e74">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_fb264692a29356491268902009ecefb98a487a98/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_9c85f3ec19a647e845e4a5fb0beb040ad28fab9b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="3f8f779a22cbb4c4d0759467a4f1011bb5252970">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.8.0_76c8ba6cb7acc78446f8b97a0546ca81f86f4daa/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b219813e431b23e27247c2864048d905b6ca457d">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f5eb324557a72d1649d28fed60293e9335b5c6d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_226a8af7d9ad176179a09a357c1576f6d5f9de12/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_bc2de3d600452a255e618f35a81bed104d9a78c2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="03df48d3713661d66ad024b1e406259a4c26fcac">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.8.0_b4f7aca274d6b4c2bdff60873c794f314884b9bc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.8.0_cded4339053a4225785542141da98d838b7d19f1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.8.0_413820601247987edd9194ead3830b0bd463601e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.8.0_60b8f344f30213dfe10c79c9dc328613d9ce92e3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.1/4d53b7d6983247af02b8fe7e4228fff555a5e828/firebase-client-jvm-2.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="4d53b7d6983247af02b8fe7e4228fff555a5e828">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/firebase-client-jvm-2.3.1_b556713d5249c44188f17dd3738ca56f7f1720d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_db582da66602d4ea947627c146f49c13fb4e897c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_88b0eee84dbe86576948d45e97a4bc61fa865f87/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-annotations-2.2.2_04c28dc41ac52f88ce230eda6d2c813efb07acf7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_95bf3245c08229294624ccd7e9ea5b14fc97d489/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="190a642ba16d1421296a4d794606279b80039c59">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.8.0_be0b7cee130af6388c4a70c1cd019dd51aa8546c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.1/be29b24233711c419ce935aa0a1b12ebc49d1c9a/firebase-client-android-2.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="be29b24233711c419ce935aa0a1b12ebc49d1c9a">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/firebase-client-android-2.3.1_9dbe2b4c04d85463e4465dfebe7eee8c433f117e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_bc7c63155b33c7c02a19f4451400d8dba3c8ce49/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_a85288544ecab9ceca03e7c1c17db70af05b05c8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/tubesock-0.0.11_55d5cffd6887d9cbe1daa421dba8275b7938e80a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/azharuddin/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/home/azharuddin/Documents/Projects/MyChatGit/MyChat/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_65dc0bf922f500e4cc03e9c922a2b060e2fd1f37/classes.dex" />
+        revision="25.0.2"
+        sha1="1b254ab54571a5daaef48d92bb12550c7ede3c25">
+        <dex dex="/home/azharuddin/Desktop/Android Projects/MyChat/app/build/intermediates/pre-dexed/debug/classes_fef6fefb6bd3b7fbe35e0b906e5a29d4eb7a93c9.jar" />
     </item>
 
 </items>

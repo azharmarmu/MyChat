@@ -1,6 +1,7 @@
 package marmu.com.mychat.holder;
 
 import com.quickblox.chat.model.QBChatDialog;
+import com.quickblox.core.helper.StringifyArrayList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -65,6 +66,15 @@ public class QBChatDialogHolder {
         }
 
         return chatDialogs;
+    }
+
+    public void removeDialog(String id) {
+        qbChatDialogHashMap.remove(id);
+    }
+
+    public void removeDialogs(StringifyArrayList<String> ids) {
+        for (String id : ids)
+            qbChatDialogHashMap.remove(id);
     }
 
 }
